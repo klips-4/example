@@ -1,6 +1,6 @@
 import {createRouter, createWebHashHistory} from "vue-router";
 import ClientsPage from "@/components/Clients/ClientsPage.vue"
-import CalendarPage from "@/components/Calendar/CalendarPage.vue";
+import InstallationPage from "@/components/Installation/InstallationPage.vue"
 import MeasuringPage from "@/components/Measuring/MeasuringPage.vue"
 import KanbanPage from "@/components/Kanban/KanbanPage.vue"
 import StatisticsPage from "@/components/Statistic/StatisticsPage.vue"
@@ -12,7 +12,7 @@ export const router = createRouter({
             path: '/clients', component: ClientsPage
         },
         {
-            path: '/calendar', component: CalendarPage
+            path: '/installation', component: InstallationPage
         },
         {
             path: '/measuring', component: MeasuringPage
