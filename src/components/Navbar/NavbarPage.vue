@@ -12,13 +12,10 @@
             <router-link class="nav-link active" to="/measuring">Замеры</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/measuring">Монтажи</router-link>
+            <router-link class="nav-link" to="/installation">Монтажи</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/clients">Клиенты</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link class="nav-link" to="/calendar">Календарь</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" to="/kanban">Канбан</router-link>

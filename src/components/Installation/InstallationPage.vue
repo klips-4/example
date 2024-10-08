@@ -21,7 +21,7 @@ const calendarOptions = ref({
     right: 'dayGridMonth,dayGridWeek,dayGridDay'
   },
   height: '100vh',
-  initialView: 'dayGridMonth',
+  initialView: 'dayGridWeek',
   locale: 'ru',
   editable: true,
   dayMaxEvents: true,
