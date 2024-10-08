@@ -1,12 +1,14 @@
 <template>
-<h2>dfg</h2>
+  <Navbar/>
+  <router-view/>
 </template>
 
 <script setup>
 
 
+import Navbar from "@/components/Navbar/NavbarPage";
 </script>
 
-<style>
-
+<style lang="scss">
+@import "./assets/styles/styles.scss";
 </style>
