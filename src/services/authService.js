@@ -2,7 +2,7 @@ import axios from "axios";
 import VueJwtDecode from 'vue-jwt-decode'
 import {useAuthStore} from "@/stores/authStore.js";
 
-const API_URL = 'http://localhost:5279/api/auth';
+const API_URL = 'http://localhost:5192/api/auth';
 const authApi = axios.create({
     baseURL: API_URL,
     headers: {

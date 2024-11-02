@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">PotolkoFF</a>
+      <a @click="exit" class="navbar-brand fw-bold" href="#">PotolkoFF</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,6 +36,12 @@
 <script setup>
 // import {ref} from "vue";
 
+import {useAuthStore} from "@/stores/authStore";
+
+const authStore = useAuthStore()
+const exit = () => {
+  authStore.logout()
+}
 
 //   {title: "Монтажи", url: 'measuring'},
 //   {title: "Клиенты", url: '/clients'},
