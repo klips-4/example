@@ -9,7 +9,7 @@ import StatisticsPage from "@/components/Statistic/StatisticsPage.vue"
 import MainPage from "@/views/MainPage.vue";
 import AuthenticatedLayout from "@/layouts/AuthenticatedLayout.vue";
 import UnAuthenticatedLayout from "@/layouts/UnAuthenticatedLayout.vue";
-// import {useAuthStore} from "@/stores/authStore";
+import {useAuthStore} from "@/stores/authStore";
 
 
 export const router = createRouter({
@@ -62,13 +62,13 @@ export const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    // const publicPage = ['/login'];
-    // const authRequired = !publicPage.includes(to.path);
-    // // const auth = useAuthStore()
+    const publicPage = ['/login'];
+    const authRequired = !publicPage.includes(to.path);
+    const auth = useAuthStore()
 
-    // if (authRequired && !auth.accessToken) {
-    //     next('/login');
-    // } else
+    if (authRequired && !auth.accessToken) {
+        next('/login');
+    } else
         next();
 
 })

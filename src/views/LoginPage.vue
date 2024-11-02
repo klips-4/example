@@ -16,7 +16,7 @@
             <input type="checkbox" class="form-check-input" v-model="isRememberMe">
             <label class="form-check-label" for="exampleCheck1">Запомнить меня</label>
           </div>
-          <button  class="btn btn-light btn-custom">Вход</button>
+          <button @click="authStore.login(user, password)" class="btn btn-light btn-custom">Вход</button>
         </form>
       </div>
     </div>
@@ -26,6 +26,9 @@
 <script setup>
 import {ref} from "vue";
 
+import {useAuthStore} from "@/stores/authStore.js";
+
+const authStore = useAuthStore()
 
 const user = ref('');
 const password = ref('');
